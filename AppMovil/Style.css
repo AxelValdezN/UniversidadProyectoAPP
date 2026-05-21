@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.movile-frame {
+    background-color: #fff;
+    width: 350px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+    border: 8px solid #ccc;
+}
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+.category-item {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.btn-cancelar, .btn-guardar {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: bold;
+    cursor: pointer;
+}
+.btn-cancelar {
+    background-color: #e0e0e0;
+    color: #333;
+}
+.btn-guardar {
+    background-color: #6c5ce7;
+    color: white;
+}
