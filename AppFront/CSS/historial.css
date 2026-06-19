@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f3ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.phone{
+    width:390px;
+    height:800px;
+    background:white;
+    border-radius:30px;
+    overflow-y:auto;
+    box-shadow:0 10px 40px rgba(0,0,0,.08);
+}
+
+header{
+    padding:25px;
+}
+
+header h2{
+    margin-bottom:5px;
+}
+
+header p{
+    color:#777;
+}
+
+.stats{
+
+    display:flex;
+    gap:15px;
+
+    padding:20px;
+}
+
+.stat-card{
+
+    flex:1;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    color:white;
+
+    text-align:center;
+}
+
+.complete{
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #4ade80
+    );
+}
+
+.pending{
+    background:linear-gradient(
+        135deg,
+        #7C4DFF,
+        #A970FF
+    );
+}
+
+.stat-card h3{
+    font-size:30px;
+}
+
+.search{
+    padding:0 20px;
+}
+
+.search input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#f7f7ff;
+}
+
+.history-list{
+
+    padding:20px;
+    padding-bottom:120px;
+}
+
+.history-card{
+
+    background:#f8f8ff;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    margin-bottom:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.history-card p{
+    color:#777;
+    margin-top:5px;
+}
+
+.status{
+
+    width:35px;
+    height:35px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+}
+
+.success{
+    background:#22c55e;
+}
+
+.cancel{
+    background:#ef4444;
+}
+
+nav{
+
+    position:fixed;
+
+    width:390px;
+
+    bottom:0;
+
+    height:80px;
+
+    background:white;
+
+    border-top:1px solid #eee;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#888;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    font-size:14px;
+}
+
+nav a.active{
+
+    color:#7C4DFF;
+
+    font-weight:bold;
+}
