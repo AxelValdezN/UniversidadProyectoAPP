@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP-DO | Perfil</title>
+
+    <link rel="stylesheet" href="CSS/perfil.css">
+</head>
+<body>
+
+<div class="phone">
+
+    <header>
+
+        <div class="profile">
+
+            <div class="avatar">
+                M
+            </div>
+
+            <h2>Marlon</h2>
+
+            <p>admin@appdo.com</p>
+
+        </div>
+
+    </header>
+
+    <section class="options">
+
+        <div class="option">
+            <span>🔔 Notificaciones</span>
+            <input type="checkbox" checked>
+        </div>
+
+        <div class="option">
+            <span>🌙 Modo Oscuro</span>
+            <input type="checkbox">
+        </div>
+
+        <div class="option">
+            <span>🔒 Cambiar Contraseña</span>
+            <span>›</span>
+        </div>
+
+        <div class="option">
+            <span>📧 Cambiar Correo</span>
+            <span>›</span>
+        </div>
+
+        <div class="option">
+            <span>ℹ️ Acerca de APP-DO</span>
+            <span>›</span>
+        </div>
+
+    </section>
+
+    <section class="version">
+
+        <p>Versión 1.0</p>
+
+        <p>
+            APP-DO Recordatorios Inteligentes
+        </p>
+
+    </section>
+
+    <section class="logout">
+
+        <button onclick="cerrarSesion()">
+            Cerrar Sesión
+        </button>
+
+    </section>
+
+    <nav>
+
+        <a href="dashboard.html">
+            🏠
+            <span>Inicio</span>
+        </a>
+
+        <a href="evento.html">
+            ➕
+            <span>Evento</span>
+        </a>
+
+        <a href="calendario.html">
+            📅
+            <span>Calendario</span>
+        </a>
+
+        <a href="historial.html">
+            📋
+            <span>Historial</span>
+        </a>
+
+        <a href="perfil.html" class="active">
+            ⚙️
+            <span>Perfil</span>
+        </a>
+
+    </nav>
+
+</div>
+
+<script>
+
+function cerrarSesion(){
+
+    sessionStorage.clear();
+
+    window.location.href =
+        "index.html";
+
+}
+
+</script>
+
+</body>
+</html>
