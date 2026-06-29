@@ -1,30 +1,33 @@
-using Microsoft.EntityFrameworkCore;
 using AppDoAPI.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// cnfigurar la base de datos SQLite
+// Configuramos al base de datos de Postgresql
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source=appdo.db"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection"))); //intectamos el motor (dbcontext)
 
-// configurar CORS (Permitir que el frontend se conecte)
+// configuramos la parte de Cors para permitir que en el futuro el apk se conecte sin bloqueos
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll",
-        policy =>
-        {
-            policy.AllowAnyOrigin()
-                  .AllowAnyMethod()
-                  .AllowAnyHeader();
-        });
+    options.AddPolicy("PermitirTodo", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
 
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
-app.UseCors("AllowAll");
+// Hacemos la activacioin de Cors en la app
+app.UseCors("PermitirTodo");
+
 app.UseAuthorization();
-app.MapControllers();
+app.MapControllers(); // reutilizamos los controllers y los analiza (crea las urls automaticamente sin mover codigo)
 
 app.Run();
