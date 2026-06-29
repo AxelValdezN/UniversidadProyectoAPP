@@ -1,0 +1,54 @@
+﻿@model app_to_do.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<link rel="stylesheet" href="~/css/login.css" />
+
+<div class="login-container">
+
+    <div class="card">
+
+        <h2>Welcome back!</h2>
+
+        <p>Glad to see you again</p>
+
+        <form asp-controller="Account"
+              asp-action="Login"
+              method="post"
+              id="loginForm">
+
+            <div class="form-group">
+
+                <input asp-for="Usuario"
+                       id="usuario"
+                       placeholder="Correo electrónico" />
+
+                <span asp-validation-for="Usuario"></span>
+
+            </div>
+
+            <div class="form-group">
+
+                <input asp-for="Password"
+                       id="password"
+                       type="password"
+                       placeholder="Password" />
+
+                <span asp-validation-for="Password"></span>
+
+            </div>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="~/js/login.js"></script>
+
